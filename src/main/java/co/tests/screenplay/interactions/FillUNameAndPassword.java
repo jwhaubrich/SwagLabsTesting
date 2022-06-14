@@ -5,10 +5,7 @@ import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Enter;
 
-import java.util.Map;
-
-import static co.tests.screenplay.userinterface.LoginPage.passwordTextBox;
-import static co.tests.screenplay.userinterface.LoginPage.userNameTextBox;
+import static co.tests.screenplay.userinterface.LoginPage.USERNAME_TEXT_BOX;
 
 //have the different usernames to enter in inside this class as a string list?
 //you don't want the user to have the option of entering things into the textbox
@@ -27,7 +24,7 @@ public class FillUNameAndPassword implements Interaction {
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(
-            Enter.theValue(userName).into(userNameTextBox)
+            Enter.theValue(userName).into(USERNAME_TEXT_BOX)
 //            Enter.theValue(password).into(passwordTextBox)
                 );
     }
