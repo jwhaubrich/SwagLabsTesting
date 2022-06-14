@@ -6,7 +6,7 @@ import org.junit.runner.*;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/login_to_swaglabs.feature",
+        features = "src/test/resources/features/valid_invalid_login.feature",
         glue = "co.tests.screenplay.stepdefinitions",
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
