@@ -1,0 +1,26 @@
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies{
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.4.34")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+dependencies {
+    implementation 'net.serenity-bdd:serenity-cucumber:3.2.5'
+    implementation 'net.serenity-bdd:serenity-screenplay:3.2.5'
+    implementation 'net.serenity-bdd:serenity-ensure:3.2.5'
+}
+
+gradle.startParameter.continueOnFailure = true
