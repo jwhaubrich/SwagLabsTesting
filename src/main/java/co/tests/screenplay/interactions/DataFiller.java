@@ -4,7 +4,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Enter;
-import org.openqa.selenium.Keys;
 
 import static co.tests.screenplay.userinterface.LoginPage.PASSWORD_TEXT_BOX;
 import static co.tests.screenplay.userinterface.LoginPage.USERNAME_TEXT_BOX;
@@ -13,11 +12,11 @@ import static co.tests.screenplay.userinterface.LoginPage.USERNAME_TEXT_BOX;
 //you don't want the user to have the option of entering things into the textbox
 //does it make sense to have them all inside the same class?
 
-public class FillUserNameAndPassword implements Interaction {
+public class DataFiller implements Interaction {
     private String userName;
     private String password;
 
-    public FillUserNameAndPassword(String userName, String password) {
+    public DataFiller(String userName, String password) {
         this.userName = userName;
         this.password = password;
     }
@@ -32,7 +31,7 @@ public class FillUserNameAndPassword implements Interaction {
 
     }
 
-    public static FillUserNameAndPassword fillUserNameAndPassword(String userName, String password){
-        return Tasks.instrumented(FillUserNameAndPassword.class, userName, password);
+    public static DataFiller fillUserNameAndPassword(String userName, String password){
+        return Tasks.instrumented(DataFiller.class, userName, password);
     }
 }
